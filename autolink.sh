@@ -13,8 +13,7 @@
 #在qBittorrent分别按如上顺序键入参数，ex:/path/to/autolink.sh "%N" "%D" "%L"
 
 #your_path=/path/to/creat/link
-your_path=/mnt/nas/disk2/jellyfin
-
+your_path=/home/ytyt/emby
 #获取种子名称
 torrent_name="$1"
 #获取保存路径
@@ -25,7 +24,7 @@ torrent_category="$3"
 link_path_library="$your_path"/"$torrent_category"
 
 #判断是否是需要建立硬链接的分类
-if [[ "$torrent_category" == *"movies"* || "$torrent_category" == *"series"* || "$torrent_category" == *"documents"* || "$torrent_category" == *"operas"* ]]
+if [[ "$torrent_category" == *"movie"* || "$torrent_category" == *"shows"* || "$torrent_category" == *"documents"* || "$torrent_category" == *"operas"* ]]
 then
   #判断是单文件种子还是带有目录的种子
   if [ -d "$torrent_path"/"$torrent_name" ];
